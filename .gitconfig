@@ -1,0 +1,15 @@
+[alias]
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+        ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+        psuo = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
+        plff = pull --ff-only
+        s = status
+        br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+        co = checkout
+        com = !git checkout master
+        cob = checkout -b
+        save = !git add -A && git commit -m 'chore: savepoint'
+        undo = reset HEAD~1 --mixed
+        del = branch -D
+        res = !git reset --hard
+        psuo2 = !git push -u origin $(git rev-parse --abbrev-ref HEAD)
